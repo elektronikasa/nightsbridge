@@ -1,0 +1,14 @@
+$font-family: Arial, sans-serif;
+$time: .3s;
+$time-fast: .2s;
+$time-fastest: .1s;
+$ease: ease-out;
+$border-size: 5px;
+$transition: $time $ease;
+$transition-fast: $time-fast $ease;
+$transition-fastest: $time-fastest $ease;
+
+$menu-width: 320px;
+$top-nav-height: 80px;
+$footer-nav-height: 78px;
+$nav-heights-combined: 158px;
