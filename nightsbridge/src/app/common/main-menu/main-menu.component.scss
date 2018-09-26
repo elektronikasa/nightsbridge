@@ -1,0 +1,42 @@
+@import "src/scss/variables";
+
+.main-menu {
+  width: $menu-width;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(169deg, #4099c9, #3892c5 20%, #2f8bc1 40%, #2584be 60%, #177dba 80%, #0076b6);
+  z-index: 11;
+  transform: translate(-$menu-width);
+  transition: transform $transition;
+  &--open {
+    transform: translate(0);
+  }
+
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+    margin-bottom: 32px;
+
+    .close {
+      background: rgba(255, 255, 255, 0.15);
+      width: 62px;
+      height: 48px;
+      padding: 14px;
+      margin-right: 20px;
+      justify-content: flex-end;
+      cursor: pointer;
+      display: flex;
+      transition: background $transition-fast;
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

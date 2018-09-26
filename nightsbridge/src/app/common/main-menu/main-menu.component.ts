@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { MainMenuService } from '../../services/main-menu.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit {
-
-  constructor() { }
+  isOpen: boolean;
+  constructor(private mainMenuService: MainMenuService, private r: ComponentFactoryResolver ) { }
 
   ngOnInit() {
+    this.mainMenuService.state.subscribe(({ isOpen }) => {
+      this.isOpen = isOpen;
+    });
   }
 
+  close() {
+    this.mainMenuService.close();
+  }
 }
