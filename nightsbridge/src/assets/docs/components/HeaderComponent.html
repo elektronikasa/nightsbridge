@@ -127,6 +127,9 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                <a href="#onMenuClick">onMenuClick</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -145,15 +148,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(mainMenuService: <a href="../injectables/MainMenuService.html">MainMenuService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/common/header/header.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/common/header/header.component.ts:9</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mainMenuService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MainMenuService.html" target="_self" >MainMenuService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -189,7 +222,45 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/common/header/header.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/common/header/header.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onMenuClick"></a>
+                        <span class="name">
+                            <b>
+                            onMenuClick
+                            </b>
+                            <a href="#onMenuClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onMenuClick()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/common/header/header.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -212,7 +283,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, OnInit, Output } from &#x27;@angular/core&#x27;;
+import { MainMenuService } from &#x27;../../services/main-menu.service&#x27;;
 
 @Component({
   selector: &#x27;app-header&#x27;,
@@ -221,11 +293,13 @@
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mainMenuService: MainMenuService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onMenuClick() {
+    this.mainMenuService.open();
   }
-
 }
 </code></pre>
     </div>
@@ -233,7 +307,7 @@ export class HeaderComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;header class&#x3D;&quot;header&quot;&gt;
   &lt;div class&#x3D;&quot;top-header&quot;&gt;
-
+    &lt;p (click)&#x3D;&quot;onMenuClick()&quot;&gt;open  &lt;i class&#x3D;&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/p&gt;
   &lt;/div&gt;
 &lt;/header&gt;
 </code></pre>
@@ -264,7 +338,7 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header class="header">  <div class="top-header">  </div></header></div>'
+        var COMPONENT_TEMPLATE = '<div><header class="header">  <div class="top-header">    <p (click)="onMenuClick()">open  <i class="fa fa-check"></i></p>  </div></header></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'MainMenuComponent', 'selector': 'app-main-menu'},{'name': 'MenuListItemsComponent', 'selector': 'app-menu-list-items'},{'name': 'MissingComponent', 'selector': 'app-missing'},{'name': 'StyleGuideComponent', 'selector': 'app-style-guide'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};

@@ -66,6 +66,12 @@
 
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
 
 
 <section>
@@ -105,41 +111,241 @@
     </table>
 </section>
 
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isMenuVisible">isMenuVisible</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
 
 
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(mainMenuService: <a href="../injectables/MainMenuService.html">MainMenuService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mainMenuService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MainMenuService.html" target="_self" >MainMenuService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
 
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/app.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isMenuVisible"></a>
+                        <span class="name">
+                            <b>
+                            isMenuVisible
+                            </b>
+                            <a href="#isMenuVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>isMenuVisible:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+import &#x27;rxjs/add/operator/map&#x27;;
+import { MainMenuService } from &#x27;./services/main-menu.service&#x27;;
 
 @Component({
   selector: &#x27;app-root&#x27;,
   templateUrl: &#x27;./app.component.html&#x27;,
   styleUrls: [&#x27;./app.component.scss&#x27;]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  isMenuVisible &#x3D; false;
 
+  constructor(private mainMenuService: MainMenuService) {  }
+
+  ngOnInit() {
+    // ElementQueries.listen();
+    // ElementQueries.init();
+
+    this.mainMenuService.state.subscribe(({ isOpen }) &#x3D;&gt; this.isMenuVisible &#x3D; isOpen);
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- start application global header --&gt;
-&lt;app-header&gt;&lt;/app-header&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;viewport app-container&quot;&gt;
 
-&lt;app-main-menu&gt;&lt;/app-main-menu&gt;
-&lt;!-- start application main router --&gt;
-&lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;!-- start application global header --&gt;
+  &lt;app-header&gt;&lt;/app-header&gt;
 
-&lt;!-- start application main footer --&gt;
-&lt;app-footer&gt;&lt;/app-footer&gt;
+  &lt;!-- start side push off canvas menu --&gt;
+  &lt;app-main-menu&gt;&lt;/app-main-menu&gt;
+
+  &lt;!-- site wrapper --&gt;
+  &lt;div class&#x3D;&quot;wrapper&quot; [class.show-nav]&#x3D;&quot;isMenuVisible&quot;&gt;
+
+    &lt;div class&#x3D;&quot;canvas&quot;&gt;
+      &lt;section class&#x3D;&quot;main hbox space-between&quot;&gt;
+
+        &lt;!-- start view--&gt;
+        &lt;router-outlet&gt;&lt;/router-outlet&gt;
+
+        &lt;!-- start application main footer --&gt;
+        &lt;app-footer&gt;&lt;/app-footer&gt;
+
+        &lt;!-- debug --&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -168,7 +374,7 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- start application global header --><app-header></app-header><app-main-menu></app-main-menu><!-- start application main router --><router-outlet></router-outlet><!-- start application main footer --><app-footer></app-footer></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="viewport app-container">  <!-- start application global header -->  <app-header></app-header>  <!-- start side push off canvas menu -->  <app-main-menu></app-main-menu>  <!-- site wrapper -->  <div class="wrapper" [class.show-nav]="isMenuVisible">    <div class="canvas">      <section class="main hbox space-between">        <!-- start view-->        <router-outlet></router-outlet>        <!-- start application main footer -->        <app-footer></app-footer>        <!-- debug -->      </section>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'MainMenuComponent', 'selector': 'app-main-menu'},{'name': 'MenuListItemsComponent', 'selector': 'app-menu-list-items'},{'name': 'MissingComponent', 'selector': 'app-missing'},{'name': 'StyleGuideComponent', 'selector': 'app-style-guide'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
