@@ -9,6 +9,10 @@ import { ButtonComponent } from './common/button/button.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { MissingComponent } from './pages/missing/missing.component';
 import { StyleGuideComponent } from './pages/style-guide/style-guide.component';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { StyleGuideComponent } from './pages/style-guide/style-guide.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InputsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
