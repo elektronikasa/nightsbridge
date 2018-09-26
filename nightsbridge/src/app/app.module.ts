@@ -13,7 +13,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainMenuComponent } from './common/main-menu/main-menu.component';
 import { MenuListItemsComponent } from './common/main-menu/menu-list-items/menu-list-items.component';
-
+import 'rxjs/add/operator/map';
+import { MainMenuService } from './services/main-menu.service';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { MenuListItemsComponent } from './common/main-menu/menu-list-items/menu-
     InputsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    MainMenuService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

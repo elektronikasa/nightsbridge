@@ -1,5 +1,13 @@
 @import 'reset';
 @import 'colors';
+@import 'fonts';
 @import 'variables';
 @import 'mixins';
 @import 'weather/weather-icons';
+
+body {
+  font-family: $font-family;
+  font-weight: 300;
+  background: $color-page-background;
+  -webkit-font-smoothing: antialiased;
+}

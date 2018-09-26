@@ -1,9 +1,25 @@
-<!-- start application global header -->
-<app-header></app-header>
+<div class="viewport app-container">
 
-<app-main-menu></app-main-menu>
-<!-- start application main router -->
-<router-outlet></router-outlet>
+  <!-- start application global header -->
+  <app-header></app-header>
 
-<!-- start application main footer -->
-<app-footer></app-footer>
+  <!-- start side push off canvas menu -->
+  <app-main-menu></app-main-menu>
+
+  <!-- site wrapper -->
+  <div class="wrapper" [class.show-nav]="isMenuVisible">
+
+    <div class="canvas">
+      <section class="main hbox space-between">
+
+        <!-- start view-->
+        <router-outlet></router-outlet>
+
+        <!-- start application main footer -->
+        <app-footer></app-footer>
+
+        <!-- debug -->
+      </section>
+    </div>
+  </div>
+</div>
