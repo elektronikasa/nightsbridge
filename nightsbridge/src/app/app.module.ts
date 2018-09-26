@@ -11,6 +11,8 @@ import { MissingComponent } from './pages/missing/missing.component';
 import { StyleGuideComponent } from './pages/style-guide/style-guide.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainMenuComponent } from './common/main-menu/main-menu.component';
+import { MenuListItemsComponent } from './common/main-menu/menu-list-items/menu-list-items.component';
 
 
 
@@ -22,7 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonComponent,
     LandingComponent,
     MissingComponent,
-    StyleGuideComponent
+    StyleGuideComponent,
+    MainMenuComponent,
+    MenuListItemsComponent
   ],
   imports: [
     BrowserModule,
