@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  flex-direction: column;
+
+  .top-header {
+    background-color: rgba(20,20,20,0.8);
+    color: rgba(165,157,144,0.75);
+    height: 45px;
+    line-height: 45px;
+  }
+}
