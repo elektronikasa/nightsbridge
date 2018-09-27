@@ -1,0 +1,22 @@
+@import "src/scss/media-queries";
+
+.booking-form-container-flex {
+  display: flex;
+  opacity: 0.8;
+  @include r(240)  { }
+  @include r(320)  {
+    flex-direction: column;
+   }
+  @include r(480)  { }
+  @include r(768)  {
+    flex-direction: row;
+   }
+  @include r(1024) { }
+  @include r(1140) { }
+  @include r(1280) { }
+  @include r(1500) { }
+  .k-button {
+    height: 29px;
+    margin-top: 1px;
+  }
+}

@@ -3,7 +3,6 @@
 .canvas {
   backface-visibility: hidden;
   width: 100%;
-  min-height: calc(100vh - #{$top-nav-height});
   position: relative;
   transform: translateX(0);
   transition: transform $transition;
@@ -17,7 +16,7 @@
   overflow: hidden;
   width: 100%;
   display: block;
-  max-height: calc(100vh - #{$top-nav-height});
+  max-height: calc(100vh - 90px);
   overflow-x: hidden;
   overflow-y: auto;
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MainMenuService } from '../../services/main-menu.service';
+import { BookingFormComponent } from '../../panels/booking-form/booking-form.component';
 
 @Component({
   selector: 'app-header',

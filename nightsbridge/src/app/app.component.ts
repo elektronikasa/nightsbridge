@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { MainMenuService } from './services/main-menu.service';
 

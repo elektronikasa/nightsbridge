@@ -1,12 +1,25 @@
 <div class="main-menu" [class.main-menu--open]="isOpen">
+  <!-- start menu header -->
   <header class="header" (click)="close()">
     <div class="close">
       <p>close</p>
     </div>
-    <p>logo</p>
   </header>
+  <!-- end menu header -->
 
+  <section class="room-info">
+    <p class="status-message">Success - we have something!</p>
+    <h3 class="room-selection">Superior Room</h3>
+    <h4 class="price-from">From</h4>
+    <h3 class="price">R1290 pn</h3>
 
-  <!-- insert presentational component // Main Menu Items-->
-  <app-menu-list-items></app-menu-list-items>
+    <div class="room-specs">
+      <p>Bed: Twin Bed</p>
+      <p>Capacity: 2 adults &amp; 1 Child</p>
+      <p>Room size: 40 Square Meters</p>
+      <p>View: Sea View</p>
+    </div>
+    <button kendoButton (click)="showSuccess()" [primary]="true">BOOK NOW</button>
+  </section>
+
 </div>

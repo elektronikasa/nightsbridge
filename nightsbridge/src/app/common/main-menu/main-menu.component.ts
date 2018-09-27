@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, TemplateRef } from '@angular/core';
 import { MainMenuService } from '../../services/main-menu.service';
+import { NotificationService } from '@progress/kendo-angular-notification';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,15 +9,27 @@ import { MainMenuService } from '../../services/main-menu.service';
 })
 export class MainMenuComponent implements OnInit {
   isOpen: boolean;
-  constructor(private mainMenuService: MainMenuService, private r: ComponentFactoryResolver ) { }
+  @ViewChild('template', { read: TemplateRef })
+    public notificationTemplate: TemplateRef<any>;
 
-  ngOnInit() {
-    this.mainMenuService.state.subscribe(({ isOpen }) => {
-      this.isOpen = isOpen;
-    });
+    // public type: Type;
+    constructor(private mainMenuService: MainMenuService, private notificationService: NotificationService) { }
+    public showSuccess(): void {
+      this.notificationService.show({
+          content: 'Success notification',
+          hideAfter: 600,
+          position: { horizontal: 'center', vertical: 'top' },
+          animation: { type: 'fade', duration: 400 },
+          type: { style: 'success', icon: true }
+      });
   }
+    ngOnInit() {
+      this.mainMenuService.state.subscribe(({ isOpen }) => {
+        this.isOpen = isOpen;
+      });
+    }
 
-  close() {
-    this.mainMenuService.close();
-  }
+    close() {
+      this.mainMenuService.close();
+    }
 }

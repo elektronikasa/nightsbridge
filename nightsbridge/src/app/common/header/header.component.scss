@@ -3,11 +3,18 @@
 .header {
   display: flex;
   flex-direction: column;
+  opacity: 0.8;
 
   .top-header {
-    background-color: rgba(20,20,20,0.8);
-    color: rgba(165,157,144,0.75);
-    height: 45px;
+    background-color: #fff;
+    background-repeat: repeat;
+    height: 90px;
     line-height: 45px;
+    .logo {
+      width: auto;
+      height: 70px;
+      margin-top: 10px;
+    }
   }
 }
+

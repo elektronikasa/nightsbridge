@@ -1,0 +1,15 @@
+<div class="booking-form-container-flex">
+    <div>
+        <kendo-datepicker placeholder="ARRIVAL"></kendo-datepicker>
+    </div>
+    <div>
+        <kendo-datepicker placeholder="DEPARTURE"></kendo-datepicker>
+    </div>
+    <div>
+        <kendo-combobox [data]="adultListItems" placeholder="ADULTS"></kendo-combobox>
+    </div>
+    <div>
+        <kendo-combobox [data]="childrenListItems" placeholder="CHILDREN"></kendo-combobox>
+    </div>
+    <button kendoButton [look]="'outline'" [primary]="true" (click)="onMenuClick()">CHECK AVAILABILITY</button>
+</div>

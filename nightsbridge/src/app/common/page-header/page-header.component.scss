@@ -1,0 +1,18 @@
+@import "src/scss/colors";
+@import "src/scss/variables";
+@import "src/scss/media-queries";
+
+
+.heading {
+  h2 {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 20px;
+    font-family: 'Roboto Condensed', Sans-Serif;
+  }
+  P {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Cabin', Sans-Serif;
+  }
+}

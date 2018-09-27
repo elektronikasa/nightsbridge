@@ -7,11 +7,10 @@ import * as _ from 'lodash';
 
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import 'rxjs/add/operator/map';
 import { SliderComponent } from './common/slider/slider.component';
-import { OverlayPanelComponent } from './common/overlay-panel/overlay-panel.component';
-import { OverlayPanelHeaderComponent } from './common/overlay-panel/overlay-panel-header/overlay-panel-header.component';
 
 // Shared Components
 import { HeaderComponent } from './common/header/header.component';
@@ -29,8 +28,18 @@ import { StyleGuideComponent } from './pages/style-guide/style-guide.component';
 
 // Services
 import { MainMenuService } from './services/main-menu.service';
-import { OverlayPanelService } from './services/overlay-panel.service';
 import { WizardService } from './services/wizard.service';
+import { BookingFormComponent } from './panels/booking-form/booking-form.component';
+import { RoomInfoComponent } from './common/room-info/room-info.component';
+import { PageHeaderComponent } from './common/page-header/page-header.component';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { NotificationModule } from '@progress/kendo-angular-notification';
+
+
+
+
 
 // Pipes
 
@@ -51,24 +60,34 @@ import { WizardService } from './services/wizard.service';
     // Menu
     MainMenuComponent,
     MenuListItemsComponent,
-    OverlayPanelComponent,
-    OverlayPanelHeaderComponent,
     // Ui
-    SliderComponent
+    SliderComponent,
+
+    // Panels
+    BookingFormComponent,
+
+    RoomInfoComponent,
+
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     InputsModule,
-    BrowserAnimationsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    DateInputsModule,
+    ButtonsModule,
+    DropDownsModule,
+    NotificationModule
   ],
   providers: [
     MainMenuService,
-    OverlayPanelService,
     WizardService
   ],
   entryComponents: [
-    MenuListItemsComponent
+    MenuListItemsComponent,
+    BookingFormComponent
   ],
   bootstrap: [AppComponent]
 })
