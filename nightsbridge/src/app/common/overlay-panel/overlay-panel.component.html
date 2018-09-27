@@ -1,0 +1,22 @@
+<div class="fader" [class.fader--active]="isOpen" (click)="close()"></div>
+<div class="overlay-panel" [class.overlay-panel--open]="isOpen">
+  <div class="header">
+    <div class="back" (click)="back()" *ngIf="canNavigateBack">
+      <img src="/assets/images/menu/icn-back.svg">
+    </div>
+
+    <div class="close" (click)="close()">
+      <img src="/assets/images/menu/icn-close-overlay.svg">
+    </div>
+  </div>
+  <app-overlay-panel-header [hidden]="!title"
+    [title]="title" >
+  </app-overlay-panel-header>
+
+  <div class="content">
+      <!-- + ' content-panel--' + panels[0].anim -->
+    <div class="content-panel content-panel--{{animations[i]}} {{i}}" *ngFor="let panel of sequence; let i = index">
+      <div #content></div>
+    </div>
+  </div>
+</div>

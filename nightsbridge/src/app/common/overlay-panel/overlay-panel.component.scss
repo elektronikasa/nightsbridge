@@ -1,0 +1,123 @@
+@import "../../../scss/variables";
+@import '../../../scss/media-queries';
+
+.overlay-panel {
+  $width: 400px;
+  background: #ffffff;
+  position: fixed;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: $width;
+  min-width: $width;
+  transform: translateX(100%);
+  z-index: 12;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: transform $transition-fast;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &--open {
+    transform: translateX(0);
+  }
+}
+.fader {
+  position: fixed;
+  z-index: 11;
+  background: #000;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+  will-change: opacity;
+  // transform: translate3d(0,0,0);
+  transition: opacity linear $time-fast;
+  &--active {
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .56;
+  }
+}
+
+.header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  .back {
+    display: flex;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 15px;
+    transition: transform $transition, fill $transition;
+    width: 40px;
+    height: 40px;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .close {
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+    width: 62px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    transition: transform $transition, fill $transition;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.title {
+  background: #fff;
+  padding: 10px 20px;
+
+  &-hint {
+    text-transform: uppercase;
+  }
+  &-name {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  position: relative;
+  &-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(100%, 0);
+    &1 {
+      background: red;
+    }
+    &2{
+      background: green;
+    }
+
+    transition: transform $transition-fast;
+    &--no-anim {
+      transition: none;
+    }
+    &--show {
+      transform: translate(0, 0);
+    }
+    &--back {
+      transform: translate(100%, 0);
+    }
+    &--next {
+      transform: translate(-100%, 0);
+    }
+  }
+}
