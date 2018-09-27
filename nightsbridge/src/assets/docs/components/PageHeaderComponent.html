@@ -38,7 +38,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>ButtonComponent</li>
+  <li>PageHeaderComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/common/button/button.component.ts</code>
+    <code>src/app/common/page-header/page-header.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-button</code></td>
+                <td class="col-md-9"><code>app-page-header</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>button.component.scss</code></td>
+                <td class="col-md-9"><code>page-header.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./button.component.html</code></td>
+                <td class="col-md-9"><code>./page-header.component.html</code></td>
             </tr>
 
 
@@ -131,6 +131,23 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#subtitle">subtitle</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -150,7 +167,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/common/button/button.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/common/page-header/page-header.component.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -158,7 +175,51 @@
         </table>
 </section>
 
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="subtitle"></a>
+                        <code>subtitle</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/common/page-header/page-header.component.ts:10</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="title"></a>
+                        <code>title</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/common/page-header/page-header.component.ts:9</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -189,7 +250,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/common/button/button.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/common/page-header/page-header.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -212,14 +273,16 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-button&#x27;,
-  templateUrl: &#x27;./button.component.html&#x27;,
-  styleUrls: [&#x27;./button.component.scss&#x27;]
+  selector: &#x27;app-page-header&#x27;,
+  templateUrl: &#x27;./page-header.component.html&#x27;,
+  styleUrls: [&#x27;./page-header.component.scss&#x27;]
 })
-export class ButtonComponent implements OnInit {
+export class PageHeaderComponent implements OnInit {
+  @Input() title: string;
+  @Input() subtitle: string;
 
   constructor() { }
 
@@ -231,9 +294,10 @@ export class ButtonComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  button works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;heading&quot;&gt;
+  &lt;h2 class&#x3D;&quot;title&quot;&gt;{{title}}&lt;/h2&gt;
+  &lt;p class&#x3D;&quot;subtitle&quot;&gt;{{subtitle}}&lt;/p&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -262,10 +326,10 @@ export class ButtonComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  button works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="heading">  <h2 class="title">{{title}}</h2>  <p class="subtitle">{{subtitle}}</p></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookingFormComponent', 'selector': 'app-booking-form'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'MainMenuComponent', 'selector': 'app-main-menu'},{'name': 'MenuListItemsComponent', 'selector': 'app-menu-list-items'},{'name': 'MissingComponent', 'selector': 'app-missing'},{'name': 'OverlayPanelComponent', 'selector': 'app-overlay-panel'},{'name': 'OverlayPanelHeaderComponent', 'selector': 'app-overlay-panel-header'},{'name': 'PageHeaderComponent', 'selector': 'app-page-header'},{'name': 'RoomInfoComponent', 'selector': 'app-room-info'},{'name': 'SliderComponent', 'selector': 'app-slider'},{'name': 'StyleGuideComponent', 'selector': 'app-style-guide'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ButtonComponent'};
+    var ACTUAL_COMPONENT = {'name': 'PageHeaderComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -299,7 +363,7 @@ export class ButtonComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ButtonComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PageHeaderComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

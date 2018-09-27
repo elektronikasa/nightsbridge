@@ -9,6 +9,12 @@ import { NotificationService } from '@progress/kendo-angular-notification';
 })
 export class MainMenuComponent implements OnInit {
   isOpen: boolean;
+  public items: any[] = [
+    { url: '/assets/images/slides/raw/slide-apartment-1.jpg' },
+    { url: '/assets/images/slides/raw/slide-apartment-2.jpg' }
+  ];
+  public width = '100%';
+  public height = '173px';
   @ViewChild('template', { read: TemplateRef })
     public notificationTemplate: TemplateRef<any>;
 
@@ -16,7 +22,7 @@ export class MainMenuComponent implements OnInit {
     constructor(private mainMenuService: MainMenuService, private notificationService: NotificationService) { }
     public showSuccess(): void {
       this.notificationService.show({
-          content: 'Success notification',
+          content: 'Your room has been reserved.',
           hideAfter: 600,
           position: { horizontal: 'center', vertical: 'top' },
           animation: { type: 'fade', duration: 400 },

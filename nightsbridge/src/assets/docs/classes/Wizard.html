@@ -30,7 +30,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content injectable">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -39,9 +39,13 @@
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li>Injectables</li>
-  <li>OverlayPanelService</li>
+  <li>Classes</li>
+  <li>Wizard</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -59,8 +63,10 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/overlay-panel.service.ts</code>
+            <code>src/app/services/wizard.service.ts</code>
         </p>
+
+
 
 
 
@@ -77,10 +83,14 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#history">history</a>
+                                <a href="#data">data</a>
                             </li>
                             <li>
-                                <a href="#state">state</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#subscriptions">subscriptions</a>
                             </li>
                         </ul>
                     </td>
@@ -95,22 +105,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#back">back</a>
+                                <a href="#cleanup">cleanup</a>
                             </li>
                             <li>
-                                <a href="#close">close</a>
+                                <a href="#removeWatch">removeWatch</a>
                             </li>
                             <li>
-                                <a href="#open">open</a>
+                                <a href="#update">update</a>
                             </li>
                             <li>
-                                <a href="#setTitle">setTitle</a>
-                            </li>
-                            <li>
-                                <a href="#toggle">toggle</a>
-                            </li>
-                            <li>
-                                <a href="#updateValues">updateValues</a>
+                                <a href="#watch">watch</a>
                             </li>
                         </ul>
                     </td>
@@ -130,12 +134,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(wizard: <a href="../injectables/WizardService.html">WizardService</a>)</code>
+<code>constructor(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/services/overlay-panel.service.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/wizard.service.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -153,10 +157,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>wizard</td>
+                                                        <td>id</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/WizardService.html" target="_self" >WizardService</a></code>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -167,324 +171,6 @@
                                         </tbody>
                                     </table>
                             </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-            <section>
-    
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="back"></a>
-                        <span class="name">
-                            <b>
-                            back
-                            </b>
-                            <a href="#back"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>back()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/services/overlay-panel.service.ts:54</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="close"></a>
-                        <span class="name">
-                            <b>
-                            close
-                            </b>
-                            <a href="#close"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>close()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/services/overlay-panel.service.ts:49</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="open"></a>
-                        <span class="name">
-                            <b>
-                            open
-                            </b>
-                            <a href="#open"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>open(undefined: <a href="../interfaces/PanelState.html">PanelState</a>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/services/overlay-panel.service.ts:29</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>
-                                                                    <code><a href="../interfaces/PanelState.html" target="_self" >PanelState</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="setTitle"></a>
-                        <span class="name">
-                            <b>
-                            setTitle
-                            </b>
-                            <a href="#setTitle"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>setTitle(undefined: )</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/services/overlay-panel.service.ts:45</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="toggle"></a>
-                        <span class="name">
-                            <b>
-                            toggle
-                            </b>
-                            <a href="#toggle"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>toggle()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/services/overlay-panel.service.ts:59</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="updateValues"></a>
-                        <span class="name">
-                            <b>
-                            updateValues
-                            </b>
-                            <a href="#updateValues"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>updateValues(values: )</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/services/overlay-panel.service.ts:64</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>values</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -500,35 +186,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="history"></a>
+                        <a name="data"></a>
                         <span class="name">
                             <b>
-                            history
+                            data
                             </b>
-                            <a href="#history"><span class="icon ion-ios-link"></span></a>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>history:     <code><a href="../interfaces/PanelState.html" target="_self" >PanelState[]</a></code>
+                        <code>data:     <code>BehaviorSubject&lt;any&gt;</code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../interfaces/PanelState.html" target="_self" >PanelState[]</a></code>
+                            <i>Type : </i>    <code>BehaviorSubject&lt;any&gt;</code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/services/overlay-panel.service.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/services/wizard.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -539,35 +220,70 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="state"></a>
+                        <a name="id"></a>
                         <span class="name">
                             <b>
-                            state
+                                <span class="modifier">Public</span>
+                            id
                             </b>
-                            <a href="#state"><span class="icon ion-ios-link"></span></a>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>state:     <code><a href="../interfaces/Message.html" target="_self" >BehaviorSubject&lt;Message&gt;</a></code>
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>id:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../interfaces/Message.html" target="_self" >BehaviorSubject&lt;Message&gt;</a></code>
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/wizard.service.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscriptions"></a>
+                        <span class="name">
+                            <b>
+                            subscriptions
+                            </b>
+                            <a href="#subscriptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>subscriptions:     <code>Map&lt;FormGroup | Subscription&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Map&lt;FormGroup | Subscription&gt;</code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new BehaviorSubject&lt;Message&gt;({ isOpen: false })</code>
+                            <i>Default value : </i><code>new Map&lt;FormGroup, Subscription&gt;()</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/overlay-panel.service.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/wizard.service.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -576,86 +292,329 @@
         </table>
 </section>
 
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cleanup"></a>
+                        <span class="name">
+                            <b>
+                            cleanup
+                            </b>
+                            <a href="#cleanup"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>cleanup()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/services/wizard.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeWatch"></a>
+                        <span class="name">
+                            <b>
+                            removeWatch
+                            </b>
+                            <a href="#removeWatch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>removeWatch(form: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/wizard.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>form</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="update"></a>
+                        <span class="name">
+                            <b>
+                            update
+                            </b>
+                            <a href="#update"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>update(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">object</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/wizard.service.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="watch"></a>
+                        <span class="name">
+                            <b>
+                            watch
+                            </b>
+                            <a href="#watch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>watch(form: <a href="https://angular.io/api/forms/FormGroup" target="_blank">FormGroup</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/wizard.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>form</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { WizardService } from &#x27;./wizard.service&#x27;;
-import { Injectable, Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subscription } from &#x27;rxjs/Subscription&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
 import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
 import * as _ from &#x27;lodash&#x27;;
 
-interface Message {
-  isOpen: boolean;
-  component?: Component;
-  title?: string;
-  section?: string;
-}
+class Wizard {
+  data: BehaviorSubject&lt;any&gt;;
+  subscriptions: Map&lt;FormGroup, Subscription&gt; &#x3D; new Map&lt;FormGroup, Subscription&gt;();
+  constructor(public id: string) {
+    this.data &#x3D; new BehaviorSubject&lt;any&gt;({});
+  }
 
-interface PanelState {
-  component?: any;
-  componentData?: Object;
-  title?: string;
-  section?: string;
-  wizardId?: string;
+  watch(form: FormGroup) {
+    this.subscriptions.set(form, form.valueChanges.subscribe(data &#x3D;&gt; this.update(data)));
+  }
+
+  removeWatch(form) {
+    this.subscriptions.get(form).unsubscribe();
+  }
+
+  cleanup() {
+    this.subscriptions.forEach(sub &#x3D;&gt; sub.unsubscribe());
+  }
+
+  update(data: object) {
+    const wizardData &#x3D; {};
+    for (const [key, value] of Object.entries(data)) {
+      wizardData[key] &#x3D; value;
+    }
+    this.data.next(_.merge(this.data.value, wizardData));
+  }
 }
 
 @Injectable()
-export class OverlayPanelService {
-  state: BehaviorSubject&lt;Message&gt; &#x3D; new BehaviorSubject&lt;Message&gt;({ isOpen: false });
-  history: PanelState[] &#x3D; [];
+export class WizardService {
+  private data: { [name: string]: Wizard } &#x3D; {};
 
-  constructor(private wizard: WizardService) {
+  constructor() { }
+
+  start(id: string) {
+    this.remove(id);
+    this.data[id] &#x3D; new Wizard(id);
+    return this.data[id];
   }
 
-  open({ component, componentData, title, section, wizardId }: PanelState) {
-    if (wizardId) {
-      if (!this.wizard.find(wizardId)) {
-        this.wizard.start(wizardId);
-      }
+  remove(id: string) {
+    const wizard &#x3D; this.find(id);
+    if (!wizard) {
+      return;
     }
-    if (!componentData) {
-      componentData &#x3D; {};
+    wizard.cleanup();
+    // TODO: Remove other listeners
+    delete this.data[id];
+  }
+
+  find(id: string): Wizard {
+    if (!Object.hasOwnProperty.call(this.data, id)) {
+      return null;
     }
-    componentData[&#x27;wizardId&#x27;] &#x3D; wizardId;
-    if (this.state.value.component) {
-      this.history.push(this.state.value);
-    }
-    this.updateValues({ isOpen: true, title, section, component, componentData, isBack: false, history: this.history });
+    return this.data[id];
   }
-
-  setTitle({ title, section }) {
-    this.updateValues({ title, section });
-  }
-
-  close() {
-    this.history &#x3D; [];
-    this.updateValues({ isOpen: false, title: &#x27;&#x27;, section: &#x27;&#x27;, component: null, componentData: {}, history: this.history, isBack: false });
-  }
-
-  back() {
-    const { title, section, component, componentData } &#x3D; this.history.pop();
-    this.updateValues({ title, section, component, componentData, isBack: true, history: this.history });
-  }
-
-  toggle() {
-    this.updateValues({ isOpen: !this.state.value.isOpen });
-  }
-
-  // update only the necessary values, keep the others
-  updateValues(values) {
-    this.state.next({...this.state.value, ...values});
-  }
-
 }
 </code></pre>
     </div>
-
 </div>
-
-
-
-
 
 
 
@@ -679,8 +638,8 @@ export class OverlayPanelService {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'OverlayPanelService.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Wizard.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

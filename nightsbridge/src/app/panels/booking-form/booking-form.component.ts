@@ -10,8 +10,7 @@ import { MainMenuService } from '../../services/main-menu.service';
 export class BookingFormComponent implements OnInit {
   public checkInValue: Date = new Date(2018, 8, 27);
   public adultListItems: Array<string> = [
-    '1 Adult', '2 Adults', '3 Adults', '4 Adults',
-    '5 Adults', '6 Adults', '7 Adults', '8 Adults'
+    '0', '1', '2', '3', '4', '5', '6'
   ];
   public childrenListItems: Array<string> = [
     '0', '1', '2', '3', '4'

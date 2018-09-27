@@ -233,7 +233,16 @@ export class SliderComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;!-- start slider --&gt;
 &lt;div class&#x3D;&quot;slider-home-nb&quot;&gt;
-  &lt;img src&#x3D;&quot;../../../assets/images/slides/raw/slide-lapa-main.jpg&quot; alt&#x3D;&quot;slide&quot;&gt;
+
+  &lt;!-- start booking form container --&gt;
+  &lt;div class&#x3D;&quot;container home-page-landing-container&quot;&gt;
+    &lt;div class&#x3D;&quot;booking-container&quot;&gt;
+      &lt;!-- &lt;app-page-header subtitle&#x3D;&quot;Unwind the clock of modern life. Unlock the door to a wonder of the world.&quot;&gt;&lt;/app-page-header&gt;--&gt;
+
+      &lt;app-booking-form&gt;&lt;/app-booking-form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- end booking form container --&gt;
 &lt;/div&gt;
 &lt;!-- end slider --&gt;
 </code></pre>
@@ -264,8 +273,8 @@ export class SliderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- start slider --><div class="slider-home-nb">  <img src="../../../assets/images/slides/raw/slide-lapa-main.jpg" alt="slide"></div><!-- end slider --></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'MainMenuComponent', 'selector': 'app-main-menu'},{'name': 'MenuListItemsComponent', 'selector': 'app-menu-list-items'},{'name': 'MissingComponent', 'selector': 'app-missing'},{'name': 'OverlayPanelComponent', 'selector': 'app-overlay-panel'},{'name': 'OverlayPanelHeaderComponent', 'selector': 'app-overlay-panel-header'},{'name': 'SliderComponent', 'selector': 'app-slider'},{'name': 'StyleGuideComponent', 'selector': 'app-style-guide'}];
+        var COMPONENT_TEMPLATE = '<div><!-- start slider --><div class="slider-home-nb">  <!-- start booking form container -->  <div class="container home-page-landing-container">    <div class="booking-container">      <!-- <app-page-header subtitle="Unwind the clock of modern life. Unlock the door to a wonder of the world."></app-page-header>-->      <app-booking-form></app-booking-form>    </div>  </div>  <!-- end booking form container --></div><!-- end slider --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookingFormComponent', 'selector': 'app-booking-form'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'MainMenuComponent', 'selector': 'app-main-menu'},{'name': 'MenuListItemsComponent', 'selector': 'app-menu-list-items'},{'name': 'MissingComponent', 'selector': 'app-missing'},{'name': 'OverlayPanelComponent', 'selector': 'app-overlay-panel'},{'name': 'OverlayPanelHeaderComponent', 'selector': 'app-overlay-panel-header'},{'name': 'PageHeaderComponent', 'selector': 'app-page-header'},{'name': 'RoomInfoComponent', 'selector': 'app-room-info'},{'name': 'SliderComponent', 'selector': 'app-slider'},{'name': 'StyleGuideComponent', 'selector': 'app-style-guide'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SliderComponent'};
 </script>

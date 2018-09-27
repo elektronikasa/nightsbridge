@@ -2,7 +2,8 @@
 
 .booking-form-container-flex {
   display: flex;
-  opacity: 0.8;
+  justify-content: center;
+  //opacity: 0.8;
   @include r(240)  { }
   @include r(320)  {
     flex-direction: column;
@@ -16,7 +17,20 @@
   @include r(1280) { }
   @include r(1500) { }
   .k-button {
-    height: 29px;
+    height: 28px;
     margin-top: 1px;
+  }
+  .k-datepicker {
+    @include r(320)  {
+      width: 100%;
+     }
+  }
+  .k-combobox {
+    @include r(320)  {
+      width: 100%;
+     }
+     @include r(1024) {
+       min-width: 140px;
+     }
   }
 }

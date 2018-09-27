@@ -36,6 +36,8 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { NotificationModule } from '@progress/kendo-angular-notification';
+import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
+
 
 
 
@@ -79,7 +81,8 @@ import { NotificationModule } from '@progress/kendo-angular-notification';
     DateInputsModule,
     ButtonsModule,
     DropDownsModule,
-    NotificationModule
+    NotificationModule,
+    ScrollViewModule
   ],
   providers: [
     MainMenuService,
